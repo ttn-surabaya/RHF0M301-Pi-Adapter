@@ -39,7 +39,7 @@ $ <packet-forwarder-binary> start
 ```
 to:
 ```bash
-$ <packet-forwarder-binary> start --reset 7
+$ <packet-forwarder-binary> start --reset-pin 7
 ```
 _Note: **7** is the RPi hardware pin for physical pin **26**_
 
