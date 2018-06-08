@@ -213,7 +213,7 @@
 <wire x1="72.6" y1="23.35" x2="72.6" y2="27.35" width="0.127" layer="51"/>
 <wire x1="64" y1="29.35" x2="63" y2="29.35" width="0.127" layer="51"/>
 <wire x1="63" y1="29.35" x2="63" y2="21.35" width="0.127" layer="51"/>
-<text x="37" y="2" size="1.27" layer="51" font="fixed">RisingHF - RFM0M301</text>
+<text x="37" y="2" size="1.27" layer="51" font="fixed">RisingHF - RHF0M301</text>
 <wire x1="1.27" y1="4.76" x2="6.35" y2="4.76" width="0.127" layer="21"/>
 <wire x1="6.35" y1="4.76" x2="6.35" y2="35.24" width="0.127" layer="21"/>
 <wire x1="6.35" y1="35.24" x2="1.27" y2="35.24" width="0.127" layer="21"/>
@@ -2892,7 +2892,7 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="5" pad="5 M1 M2 M3 M4 M5 M6"/>
 </connects>
 <technologies>
 <technology name="">
@@ -3039,14 +3039,12 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="#afb-Aesthetics" deviceset="+5V" device="" value="PI_5V"/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="#afb-Passives" deviceset="CAP" device="0805" value="10uF"/>
 <part name="C4" library="#afb-Passives" deviceset="CAP" device="0603" value="100nF"/>
 <part name="C5" library="#afb-Passives" deviceset="CAP" device="0603" value="100pF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="C3" library="microbuilder" deviceset="CAP_TANTALUM" device="C/6032_REFLOW" value="220uF 6V"/>
-<part name="C6" library="microbuilder" deviceset="CAP_TANTALUM" device="C/6032_REFLOW" value="220uF 6V"/>
 <part name="L1" library="#afb-Passives" deviceset="INDUCTOR" device="0805" value="22uH"/>
 <part name="R1" library="#afb-Passives" deviceset="RESISTOR" device="0603" value="22"/>
 <part name="C2" library="#afb-Passives" deviceset="CAP" device="0603" value="100nF"/>
@@ -3064,10 +3062,14 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+7" library="#afb-Aesthetics" deviceset="+5V" device="" value="PI_5V"/>
 <part name="FRAME1" library="#afb-Aesthetics" deviceset="A4L-LOC" device=""/>
+<part name="R2" library="#afb-Passives" deviceset="RESISTOR" device="0603" value="22"/>
+<part name="C6" library="#afb-Passives" deviceset="CAP" device="0603" value="10nF"/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="-99.06" y="27.94" size="5.08" layer="94" font="vector">v1.1</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="-154.94" y="147.32"/>
@@ -3078,19 +3080,17 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <instance part="+3V1" gate="G$1" x="-220.98" y="180.34"/>
 <instance part="GND1" gate="1" x="-187.96" y="129.54"/>
 <instance part="P+1" gate="1" x="-231.14" y="180.34"/>
-<instance part="GND2" gate="1" x="-121.92" y="132.08"/>
 <instance part="GND3" gate="1" x="-226.06" y="96.52"/>
 <instance part="C1" gate="G$1" x="-208.28" y="48.26"/>
-<instance part="C4" gate="G$1" x="-104.14" y="157.48"/>
-<instance part="C5" gate="G$1" x="-114.3" y="157.48"/>
-<instance part="GND4" gate="1" x="-104.14" y="144.78"/>
-<instance part="C3" gate="G$1" x="-93.98" y="154.94"/>
-<instance part="C6" gate="G$1" x="-86.36" y="154.94"/>
+<instance part="C4" gate="G$1" x="-88.9" y="165.1"/>
+<instance part="C5" gate="G$1" x="-99.06" y="165.1"/>
+<instance part="GND4" gate="1" x="-88.9" y="152.4"/>
+<instance part="C3" gate="G$1" x="-78.74" y="162.56"/>
 <instance part="L1" gate="G$1" x="-101.6" y="83.82"/>
 <instance part="R1" gate="G$1" x="-114.3" y="83.82" rot="R180"/>
 <instance part="C2" gate="G$1" x="-198.12" y="48.26"/>
 <instance part="P+2" gate="VCC" x="-177.8" y="175.26"/>
-<instance part="P+3" gate="VCC" x="-104.14" y="170.18"/>
+<instance part="P+3" gate="VCC" x="-88.9" y="177.8"/>
 <instance part="P+4" gate="1" x="-48.26" y="175.26"/>
 <instance part="JP1" gate="1" x="-55.88" y="165.1"/>
 <instance part="P+5" gate="1" x="-63.5" y="175.26"/>
@@ -3106,6 +3106,9 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <instance part="GND8" gate="1" x="-111.76" y="66.04"/>
 <instance part="P+7" gate="1" x="-203.2" y="144.78"/>
 <instance part="FRAME1" gate="G$1" x="-266.7" y="15.24"/>
+<instance part="R2" gate="G$1" x="-109.22" y="147.32" rot="R180"/>
+<instance part="C6" gate="G$1" x="-119.38" y="144.78"/>
+<instance part="GND2" gate="1" x="-119.38" y="137.16"/>
 </instances>
 <busses>
 </busses>
@@ -3160,14 +3163,14 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 </net>
 <net name="RST" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="RESET"/>
-<wire x1="-137.16" y1="147.32" x2="-132.08" y2="147.32" width="0.1524" layer="91"/>
-<label x="-134.62" y="147.32" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="-104.14" y1="147.32" x2="-99.06" y2="147.32" width="0.1524" layer="91"/>
+<label x="-101.6" y="147.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X2" gate="G$1" pin="SPI_CE1"/>
-<wire x1="-210.82" y1="147.32" x2="-200.66" y2="147.32" width="0.1524" layer="91"/>
-<label x="-208.28" y="147.32" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="GPIO25"/>
+<wire x1="-241.3" y1="142.24" x2="-248.92" y2="142.24" width="0.1524" layer="91"/>
+<label x="-248.92" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -3208,36 +3211,22 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <junction x="-187.96" y="137.16"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="GND@4"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="-137.16" y1="137.16" x2="-121.92" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="137.16" x2="-121.92" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="GND@2"/>
-<wire x1="-137.16" y1="160.02" x2="-121.92" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="160.02" x2="-121.92" y2="137.16" width="0.1524" layer="91"/>
-<junction x="-121.92" y="137.16"/>
-</segment>
-<segment>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="X2" gate="G$1" pin="GND"/>
 <wire x1="-226.06" y1="99.06" x2="-226.06" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="-114.3" y1="152.4" x2="-114.3" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="149.86" x2="-104.14" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="149.86" x2="-93.98" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="149.86" x2="-93.98" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="160.02" x2="-99.06" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="157.48" x2="-88.9" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="157.48" x2="-78.74" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="157.48" x2="-78.74" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="-104.14" y1="152.4" x2="-104.14" y2="149.86" width="0.1524" layer="91"/>
-<junction x="-104.14" y="149.86"/>
+<wire x1="-88.9" y1="160.02" x2="-88.9" y2="157.48" width="0.1524" layer="91"/>
+<junction x="-88.9" y="157.48"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="-104.14" y1="147.32" x2="-104.14" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="154.94" x2="-88.9" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="-"/>
-<pinref part="C6" gate="G$1" pin="-"/>
-<wire x1="-93.98" y1="149.86" x2="-86.36" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="-86.36" y1="149.86" x2="-86.36" y2="152.4" width="0.1524" layer="91"/>
-<junction x="-93.98" y="149.86"/>
 </segment>
 <segment>
 <wire x1="-53.34" y1="124.46" x2="-50.8" y2="124.46" width="0.1524" layer="91"/>
@@ -3266,6 +3255,19 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="-121.92" y1="73.66" x2="-111.76" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-111.76" y1="73.66" x2="-111.76" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="GND@4"/>
+<wire x1="-137.16" y1="137.16" x2="-132.08" y2="137.16" width="0.1524" layer="91"/>
+<label x="-134.62" y="137.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="GND@2"/>
+<wire x1="-137.16" y1="160.02" x2="-132.08" y2="160.02" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -3363,19 +3365,15 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="162.56" x2="-93.98" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="162.56" x2="-93.98" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="170.18" x2="-78.74" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="170.18" x2="-78.74" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-104.14" y1="162.56" x2="-104.14" y2="160.02" width="0.1524" layer="91"/>
-<junction x="-104.14" y="162.56"/>
-<wire x1="-114.3" y1="162.56" x2="-104.14" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="162.56" x2="-114.3" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="167.64" x2="-104.14" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="170.18" x2="-88.9" y2="167.64" width="0.1524" layer="91"/>
+<junction x="-88.9" y="170.18"/>
+<wire x1="-99.06" y1="170.18" x2="-88.9" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="170.18" x2="-99.06" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="175.26" x2="-88.9" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="+"/>
-<pinref part="C6" gate="G$1" pin="+"/>
-<wire x1="-93.98" y1="162.56" x2="-86.36" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="-86.36" y1="162.56" x2="-86.36" y2="160.02" width="0.1524" layer="91"/>
-<junction x="-93.98" y="162.56"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
@@ -3428,6 +3426,16 @@ KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
 <wire x1="-121.92" y1="78.74" x2="-119.38" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="78.74" x2="-119.38" y2="83.82" width="0.1524" layer="91"/>
 <junction x="-119.38" y="83.82"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="-114.3" y1="147.32" x2="-119.38" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="RESET"/>
+<wire x1="-137.16" y1="147.32" x2="-119.38" y2="147.32" width="0.1524" layer="91"/>
+<junction x="-119.38" y="147.32"/>
 </segment>
 </net>
 </nets>
