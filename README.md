@@ -6,13 +6,13 @@ More info about [**RHF0M301 LoRa Gateway**](http://www.risinghf.com/product/rhf0
 
 ## Configuration
 
-The following pin configuration is used on this board
+The following pin configuration is used on this board (v1.1)
 
 RHF0M301 pin    | Description   | RPi physical pin
 ----------------|---------------|-----------------
 1,2             | Supply 5V     | 2
 3,4,21,22,23    | GND           | 6
-14              | Reset         | 26
+14              | Reset         | 22
 16              | SPI CLK       | 23
 15              | SPI MISO      | 21
 18              | SPI MOSI      | 19
@@ -29,28 +29,9 @@ There are a couple of packet forwarder software libraries that you could use for
 
 As you might notice, the RHF0M301 uses similar hardware as in other gateways such as IMST ic880a which is based on Semtech SX1301. The software is pretty much the same but usually they vary in pinout (i.e. Reset Pin).
 
-If you wish to use this gateway for The Things Networks Environment, then I suggest you to follow the [**IMST ic880a Instruction at TTN Official Github page**](https://github.com/TheThingsNetwork/packet_forwarder/blob/master/docs/INSTALL_INSTRUCTIONS/IMST_RPI.md)<br>
+If you wish to use this gateway for The Things Networks Environment, then I suggest you to follow the [**IMST ic880a Instruction at TTN Official Github page**](https://github.com/TheThingsNetwork/packet_forwarder/blob/master/docs/INSTALL_INSTRUCTIONS/IMST_RPI.md)<br>.
+It will work straight away as the wiring configuration is identical.
 
-However, please notice that you need to specify the reset pin to make it work for this board configuration.
-
-To specify the reset pin, just change the default `start` command from:
-```bash
-$ <packet-forwarder-binary> start
-```
-to:
-```bash
-$ <packet-forwarder-binary> start --reset-pin 7
-```
-_Note: **7** is the RPi hardware pin for physical pin **26**_
-
-## Assembled Board
-The following are the image of assembled board without GPS installed:
-
-### Top Side
-![Assembled Board - Top](/images/rhf0m301-pi-adapter_1.jpg)
-
-### Bottom Side
-![Assembled Board - Bottom](/images/rhf0m301-pi-adapter_2.jpg)
-
-### Putting all together
-![Putting all together](/images/rhf0m301-pi-gateway_assembled.jpg)
+## Revision History
+* v1.0 Initial Design
+* v1.1 Changed Reset Pin to Pin 22, added filter circuit on reset line, changed caps on 5V power line. 
